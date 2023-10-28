@@ -7,16 +7,16 @@ React Pokedex is a simple web application that allows you to explore and search 
 
 ## Table of Contents
 
-<!-- - [Demo](#demo) -->
+- [Demo](#demo)
 - [Features](#features)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
 - [API](#api)
 - [Contributing](#contributing)
 
-<!-- ## Demo
+## Demo
 
-You can see a live demo of the React Pokedex here: [Live Demo](https://example.com/react-pokedex) -->
+You can see a live demo of the React Pokedex here: [Live Demo](https://react-pokedex-from-vercel.vercel.app)
 
 ## Features
 
@@ -37,7 +37,7 @@ These instructions will help you set up the project on your local machine.
 1. Clone this repository to your local machine:
 
    ```shell
-   git clone https://github.com/ryotard/react-pokedex-vite.git
+   git clone https://github.com/Ryotard/react-pokedex-vite.git
 
    ```
 
