@@ -16,7 +16,7 @@ React Pokedex is a simple web application that allows you to explore and search 
 
 ## Demo
 
-You can see a live demo of the React Pokedex here: [Live Demo](https://react-pokedex-from-vercel.vercel.app)
+You can see a live demo of the React Pokedex here: [Live Demo](https://react-pokedex-vite.vercel.app)
 
 ## Features
 

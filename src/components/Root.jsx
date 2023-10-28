@@ -5,12 +5,6 @@ import Component1 from "./Component1";
 import Component3 from "./Component3";
 import TopBar from "./TopBar";
 
-
-
-
-
-
-
 function Root() {
   const [id, setId] = useState(1);
   const [name, setName] = useState("");
@@ -94,24 +88,29 @@ function Root() {
   };
 
   return (
+    
     <div className="wrapper">
       <div>
         <TopBar searchBar={searchBar} />
       </div>
 
       <div className="comp1and2and3">
-        <div className="comp1" >
+        <div className="comp1">
           <Component1
             pokeId={id}
             pokeName={name}
             pokeHeightWeight={heightWeight}
           />
         </div>
-        <div  className="comp2">
+        <div className="comp2">
           <Component2 pokeId={id} />
         </div>
-        <div  className="comp3">
-          <Component3 pokeType={type} pokeStats={stats} pokeAbilities={abilities}/>
+        <div className="comp3">
+          <Component3
+            pokeType={type}
+            pokeStats={stats}
+            pokeAbilities={abilities}
+          />
         </div>
       </div>
       <div className="footer">
