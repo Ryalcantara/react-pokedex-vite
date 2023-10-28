@@ -38,7 +38,7 @@ const badge = {
   },
 };
 
-function Component3({ pokeType,  pokeStats}) {
+function Component3({ pokeType, pokeStats, pokeAbilities }) {
   return (
     <div>
       <ul style={{ display: "flex" }}>
@@ -93,7 +93,6 @@ function Component3({ pokeType,  pokeStats}) {
                 backgroundColor: "rgba(0,0,0, 0.6)",
                 margin: "0 1rem",
                 padding: "1em",
-        
               }}
               title={type.type}
             />
@@ -101,43 +100,76 @@ function Component3({ pokeType,  pokeStats}) {
         ))}
       </ul>
       <h1>Base Stats:</h1>
-        <div style={{ borderLeft: "solid", marginLeft: "1em" }}>
+      <div style={{ borderLeft: "solid", marginLeft: "1em" }}>
         <div style={{ marginLeft: "2em" }}>
           <div style={{ display: "flex" }}>
             <div style={badge.container}>
               <div style={badge.label}>HP:</div>
-              <div style={badge.value}>{pokeStats[0] && pokeStats[0].base_stat}</div>
+              <div style={badge.value}>
+                {pokeStats[0] && pokeStats[0].base_stat}
+              </div>
             </div>
-            <div style={{marginLeft: '1em'}}>
+            <div style={{ marginLeft: "1em" }}>
               <div style={badge.container}>
                 <div style={badge.label}>ATTACK:</div>
-                <div style={badge.value}>{pokeStats[1] && pokeStats[1].base_stat}</div>
+                <div style={badge.value}>
+                  {pokeStats[1] && pokeStats[1].base_stat}
+                </div>
               </div>
             </div>
           </div>
 
           <div style={badge.container}>
             <div style={badge.label}>DEFENSE:</div>
-            <div style={badge.value}>{pokeStats[2] && pokeStats[2].base_stat}</div>
+            <div style={badge.value}>
+              {pokeStats[2] && pokeStats[2].base_stat}
+            </div>
           </div>
-
-          <div style={badge.container}>
-            <div style={badge.label}>SP. ATTACK:</div>
-            <div style={badge.value}>{pokeStats[3] && pokeStats[3].base_stat}</div>
-          </div>
-
-          <div style={badge.container}>
-            <div style={badge.label}>SP. DEFENSE:</div>
-            <div style={badge.value}>{pokeStats[4] && pokeStats[4].base_stat}</div>
+          <div style={{ display: "flex" }}>
+            <div style={badge.container}>
+              <div style={badge.label}>SP. ATTACK:</div>
+              <div style={badge.value}>
+                {pokeStats[3] && pokeStats[3].base_stat}
+              </div>
+            </div>
+            <div style={{ marginLeft: "1em" }}>
+              <div style={badge.container}>
+                <div style={badge.label}>SP. DEFENSE:</div>
+                <div style={badge.value}>
+                  {pokeStats[4] && pokeStats[4].base_stat}
+                </div>
+              </div>
+            </div>
           </div>
 
           <div style={badge.container}>
             <div style={badge.label}>SPEED:</div>
-            <div style={badge.value}>{pokeStats[5] && pokeStats[5].base_stat}</div>
+            <div style={badge.value}>
+              {pokeStats[5] && pokeStats[5].base_stat}
+            </div>
           </div>
         </div>
       </div>
+      <div style={{ borderTop: "solid", width: '30em' }}>
+        <h1>Abilities:</h1>
 
+        <div style={{ display: "flex", marginTop: "1em" }}>
+          <div style={badge.container}>
+            <div style={badge.label}>Ability 1:</div>
+            <div style={badge.value}>
+              {pokeAbilities[0] && pokeAbilities[0].abilities}
+            </div>
+          </div>
+          {pokeAbilities[1] && (
+            <div style={{ marginLeft: "1em" }}>
+              <div style={badge.container}>
+                <div style={badge.label}>Ability 2:</div>
+                <div style={badge.value}>{pokeAbilities[1].abilities}</div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }

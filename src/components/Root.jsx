@@ -17,11 +17,22 @@ function Root() {
   const [type, setType] = useState([]);
   const [stats, setStats] = useState([]);
   const [heightWeight, setHeightWeight] = useState({});
+  const [abilities, setAbilites] = useState([]);
 
   useEffect(() => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
       .then((res) => res.json())
       .then((data) => {
+        console.log(data.abilities[0].ability.name);
+
+        if (data.abilities.length == 1) {
+          setAbilites([{ abilities: data.abilities[0].ability.name }]);
+        } else if (data.abilities.length == 2) {
+          setAbilites([
+            { abilities: data.abilities[0].ability.name },
+            { abilities: data.abilities[1].ability.name },
+          ]);
+        }
         setHeightWeight({ height: data.height, weight: data.weight });
         setStats(data.stats);
         setName(data.forms[0].name);
@@ -100,7 +111,7 @@ function Root() {
           <Component2 pokeId={id} />
         </div>
         <div  className="comp3">
-          <Component3 pokeType={type} pokeStats={stats} />
+          <Component3 pokeType={type} pokeStats={stats} pokeAbilities={abilities}/>
         </div>
       </div>
       <div className="footer">
