@@ -9,7 +9,7 @@ const listStyle = {
   display: "block",
   width: "100%",
   overflow: "auto",
-  zIndex: '100'
+  zIndex: "100",
 };
 
 const TopBar = (props) => {
@@ -34,9 +34,15 @@ const TopBar = (props) => {
   }, [count]);
 
   return (
-    <div style={{position: 'relative', top: 10}}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center"}}>
-        <div style={{display: 'flex', }}>
+    <div style={{ position: "relative", top: 10 }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <div style={{ display: "flex" }}>
           <img src={logo} alt="pokemon logo" height="80" width="80" />
           <h1 className="title">Pokedex</h1>
         </div>
@@ -63,6 +69,7 @@ const TopBar = (props) => {
               height: "20em",
               width: "16.9em",
               overflow: "auto",
+              zIndex: "100",
             }}
           >
             <ul>
