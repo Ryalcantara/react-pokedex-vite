@@ -9,7 +9,7 @@ const listStyle = {
   display: "block",
   width: "100%",
   overflow: "auto",
-  zIndex: '3'
+  zIndex: '100'
 };
 
 const TopBar = (props) => {
